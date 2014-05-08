@@ -34,7 +34,8 @@ PDDL langage. The list of requirements accepted are as follow:
                + :conditional-effects
 :durative-actions - Allows durative actions. Note that this does note imply :fluents.
 :derived-predicate - Allows predicates whose truth value is defined by a formula.
-:time-initial-literals - Allows the initial state to specify literals that will become true at a specified time point implies durative-actions.
+:time-initial-literals - Allows the initial state to specify literals that will 
+                         become true at a specified time point implies durative-actions.
 :preferences - Allows use of preferences in actionCtx preconditions and goals.
 :constraints - Allows use of constraints fields in domain and problem description.
 	       These may contain modal operator supporting trajectory constraints.
