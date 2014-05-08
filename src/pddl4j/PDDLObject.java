@@ -181,12 +181,19 @@ public class PDDLObject implements Domain, Problem {
     protected Set<AtomicFormula> predicates;
 
     /**
-     * Returns an iterator over the constants defined in this pddl object.
+     * Returns an iterator over the predicates defined in this pddl object.
      * 
-     * @return an iterator over the constants defined in this pddl object.
+     * @return an iterator over the predicates defined in this pddl object.
      */
     public Iterator<AtomicFormula> predicatesIterator() {
         return this.predicates.iterator();
+    }
+
+	/**
+     * Adds predicate in this pddl object.
+     */
+    public void addPredicate(AtomicFormula predicate) {
+		this.predicates.add(predicate);
     }
 
     /**
@@ -220,6 +227,13 @@ public class PDDLObject implements Domain, Problem {
      */
     public Iterator<ActionDef> actionsIterator() {
         return this.actions.values().iterator();
+    }
+
+	/**
+     * Adds action in this pddl object.
+     */
+    public void addAction(ActionDef action) {
+        
     }
 
     /**
@@ -632,8 +646,13 @@ public class PDDLObject implements Domain, Problem {
         StringBuffer str = new StringBuffer();
         if (!this.actions.isEmpty()) {
             for (ActionDef action : this.actions.values()) {
-                str.append(action.toTypedString());
-                str.append("\n");
+				if (this.requirements.contains(RequireKey.TYPING)) {
+                    str.append(action.toTypedString());
+	                str.append("\n");
+                } else {
+                    str.append(action.toString());
+	                str.append("\n");
+                }
             }
         }
         return str.toString();

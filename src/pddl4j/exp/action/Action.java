@@ -199,9 +199,9 @@ public class Action extends AbstractActionDef {
         if (!this.parameters.isEmpty()) {
             Iterator<Term> i = this.parameters.iterator();
             Term param = i.next();
-            str.append(param.toTypedString());
+            str.append(param.toString());
             while (i.hasNext()) {
-                str.append(" " + i.next().toTypedString());
+                str.append(" " + i.next().toString());
             }
         }
         str.append(")");
