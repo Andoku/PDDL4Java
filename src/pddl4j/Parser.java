@@ -430,6 +430,7 @@ public final class Parser {
         options.put(RequireKey.STRIPS, true);
         options.put(RequireKey.TYPING, true);
         options.put(RequireKey.NEGATIVE_PRECONDITIONS, true);
+		options.put(RequireKey.DISJUNCTIVE_PRECONDITIONS, true);
         options.put(RequireKey.EQUALITY, true);
         options.put(RequireKey.QUANTIFIED_PRECONDITIONS, true);
         options.put(RequireKey.EXISTENTIAL_PRECONDITIONS, true);

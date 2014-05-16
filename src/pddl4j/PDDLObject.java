@@ -233,7 +233,7 @@ public class PDDLObject implements Domain, Problem {
      * Adds action in this pddl object.
      */
     public void addAction(ActionDef action) {
-        
+        this.actions.put(action.getName(), action);
     }
 
     /**
@@ -341,6 +341,14 @@ public class PDDLObject implements Domain, Problem {
      */
     public Exp getGoal() {
         return this.goal;
+    }
+
+ 	/**
+     * Sets the goal of the PDDL object.
+     * 
+     */
+    public void setGoal(Exp g) {
+        this.goal = g;
     }
 
     /**
