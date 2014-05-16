@@ -234,6 +234,7 @@ public class PDDLObject implements Domain, Problem {
      */
     public void addAction(ActionDef action) {
         this.actions.put(action.getName(), action);
+
     }
 
     /**
