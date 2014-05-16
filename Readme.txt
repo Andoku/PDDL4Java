@@ -22,22 +22,23 @@ PDDL langage. The list of requirements accepted are as follow:
 :equality - Supports = as built-in predicate.
 :existential-preconditions - Allows exists in goal and preconditions descriptions.
 :universal-preconditions - Allows forall in goal and preconditions descriptions.
-:quantified-preconditions - Is equivalent to :existential-preconditions + 
-	:universal-preconditions.
+:quantified-preconditions = :existential-preconditions + :universal-preconditions.
 :conditional-effects - Allows when clause in actionCtx effects.
 :fluents - Allows function definitions and use of effects using assignement 
 	operators and numeric preconditions.
-:adl - Is equivalent to :strips + :typing + :negative-preconditions + 
-	:disjunctive-preconditions + :equality + :quantified-preconditions + 
-	:conditional-effects.
-:durative-actions - Allows durative actions. Note that this does note imply 
-	:fluents.
+:adl = :strips + :typing 
+               + :negative-preconditions
+               + :disjunctive-preconditions 
+               + :equality 
+               + :quantified-preconditions 
+               + :conditional-effects
+:durative-actions - Allows durative actions. Note that this does note imply :fluents.
 :derived-predicate - Allows predicates whose truth value is defined by a formula.
-:time-initial-literals - Allows the initial state to specify literals that will
-	 become true at a specified time point implies durative-actions.
+:time-initial-literals - Allows the initial state to specify literals that will 
+                         become true at a specified time point implies durative-actions.
 :preferences - Allows use of preferences in actionCtx preconditions and goals.
 :constraints - Allows use of constraints fields in domain and problem description.
-	 These may contain modal operator supporting trajectory constraints.
+	       These may contain modal operator supporting trajectory constraints.
 
 PDDL was originally developed by Drew McDermott and the 1998 planning competition
 committee. It was inspired by the need to encourage the empirical comparison of 
