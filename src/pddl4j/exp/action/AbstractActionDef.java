@@ -116,6 +116,14 @@ public abstract class AbstractActionDef implements ActionDef {
     public final List<Term> getParameters() {
         return this.parameters;
     }
+
+	/**
+     * Sets the parameters of the action.
+     * 
+     */
+    public final void setParameters(List<Term> params) {
+        this.parameters = params;
+    }
     
     /**
      * Sets a new image to this action.

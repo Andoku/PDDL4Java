@@ -1,10 +1,13 @@
 Date: 17/05/2014
-- What's new?
+What's new?
 In PDDLObject.java added methods:
 1) public void addAction(ActionDef action)
 Adds new action in domain 
 2) public void addPredicate(AtomicFormula predicate)
 Adds new predicate in domain
+In AbstractActionDef.java added methods:
+1) public final void setParameters(List<Term> params)
+Sets new params for action
 
 
 PDDL4J library (version 1.0)

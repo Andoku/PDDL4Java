@@ -67,6 +67,12 @@ public interface ActionDef extends Iterable<Term>, Serializable, Cloneable {
      * @return the parameters of the action.
      */
     List<Term> getParameters();
+
+	/**
+     * Sets the parameters of the action.
+     * 
+     */
+    void setParameters(List<Term> params);
     
     /**
      * Adds a parameter to this action.
